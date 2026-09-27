@@ -1,0 +1,21 @@
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# 编辑器 / IDE
+.vscode/
+.idea/
+
+# 依赖与日志（本项目本身零依赖，正常不会有这些）
+node_modules/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# 抓取过程的中间产物（可重新生成）
+covers/*.tmp
+covers/*.part

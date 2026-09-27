@@ -1,0 +1,173 @@
+{
+  "_说明": [
+    "游戏清单配置。改完这个文件后运行：node tools/build-games.mjs",
+    "脚本会自动抓取封面 + 中英文资料，保存到 covers/ 并生成 js/games.js。",
+    "",
+    "每个游戏支持的字段：",
+    "  key      必填，唯一标识，同时决定封面文件名 covers/<key>.jpg",
+    "  label    必填，卡片上显示的名称（按你的收藏夹写法即可）",
+    "  accent   选填，卡片轮廓光颜色，默认 #e0e0e0",
+    "  note     选填，库状态标记，例如 位于更新队列中",
+    "  bubble   选填，封面右上角小圆标里的数字",
+    "",
+    "封面来源三选一（优先级从上到下）：",
+    "  cover    直接指定图片地址，或本地已存在的相对路径",
+    "  appid    Steam AppID，自动下载官方 header 图并抓取全部资料",
+    "  都省略   自动生成一张占位封面（不会报错，之后可随时替换）",
+    "",
+    "抓不到的封面请在 covers/ 下自行放一张 460x215 左右的横图，",
+    "然后把 cover 写成 \"covers/你的文件.jpg\" 即可。"
+  ],
+
+  "games": [
+    {
+      "key": "minecraft",
+      "label": "Minecraft",
+      "accent": "#8fbf5f",
+      "cover": "https://www.minecraft.net/content/dam/minecraftnet/franchise/logos/minecraft-creeper-face.jpg",
+      "_备注": "Steam 上没有原版，封面用官方素材；换成自己的截图也行",
+      "meta": {
+        "title": "Minecraft",
+        "titleZh": "我的世界",
+        "dev": "Mojang Studios",
+        "pub": "Xbox Game Studios",
+        "genres": "Sandbox, Survival, Adventure",
+        "genresZh": "沙盒, 生存, 冒险",
+        "release": "18 Nov, 2011",
+        "releaseZh": "2011-11-18",
+        "desc": "Minecraft is a sandbox game where you explore a blocky, procedurally generated world, gather resources, craft tools, and build anything you can imagine — alone or with friends."
+      }
+    },
+    {
+      "key": "dance",
+      "label": "冰与火之舞 A Dance of Fire and Ice",
+      "accent": "#e6e9ee",
+      "appid": 977950
+    },
+    {
+      "key": "wukong",
+      "label": "黑神话：悟空",
+      "accent": "#e2ddd6",
+      "appid": 2358720
+    },
+    {
+      "key": "forza5",
+      "label": "极限竞速：地平线 5",
+      "accent": "#dde1e8",
+      "appid": 1551360
+    },
+    {
+      "key": "party",
+      "label": "猛兽派对",
+      "accent": "#eceae6",
+      "note": "位于更新队列中",
+      "bubble": "2",
+      "appid": 1260320
+    },
+    {
+      "key": "humanfall",
+      "label": "人类一败涂地 / Human Fall Flat",
+      "accent": "#e4e8ee",
+      "appid": 477160
+    },
+    {
+      "key": "cyberpunk",
+      "label": "赛博朋克 2077",
+      "accent": "#f2f2f0",
+      "appid": 1091500
+    },
+    {
+      "key": "codmw2",
+      "label": "《使命召唤®：现代战争® II 2022》",
+      "accent": "#e0e3e0",
+      "appid": 3595230
+    },
+    {
+      "key": "bf2042",
+      "label": "《战地风云™ 2042》",
+      "accent": "#e0e6ec",
+      "appid": 1517290
+    },
+    {
+      "key": "backrooms",
+      "label": "Escape the Backrooms",
+      "accent": "#ebe7dd",
+      "appid": 1943950
+    },
+    {
+      "key": "picopark",
+      "label": "PICO PARK",
+      "accent": "#eae6e1",
+      "appid": 1509960
+    },
+    {
+      "key": "portal",
+      "label": "Portal",
+      "accent": "#e3e9f0",
+      "appid": 400
+    },
+    {
+      "key": "portal2",
+      "label": "Portal 2",
+      "accent": "#dee5ee",
+      "appid": 620
+    },
+    {
+      "key": "raft",
+      "label": "Raft",
+      "accent": "#dfe8ea",
+      "bubble": "2",
+      "appid": 648800
+    },
+    {
+      "key": "repo",
+      "label": "R.E.P.O.",
+      "accent": "#eee6e6",
+      "bubble": "2",
+      "appid": 3241660
+    },
+    {
+      "key": "seaoftheives",
+      "label": "Sea of Thieves",
+      "accent": "#dde9e4",
+      "appid": 1172620
+    },
+    {
+      "key": "wallpaper",
+      "label": "Wallpaper Engine：壁纸引擎",
+      "accent": "#e2e6ef",
+      "appid": 431960
+    },
+    {
+      "key": "wrc7",
+      "label": "WRC 7",
+      "accent": "#edeae0",
+      "appid": 621830
+    },
+    {
+      "key": "wrcgen",
+      "label": "WRC Generations - The FIA WRC Off",
+      "accent": "#ebe5df",
+      "appid": 1953520
+    },
+    {
+      "key": "bluearchive",
+      "label": "蔚蓝档案",
+      "accent": "#7fb3e8",
+      "appid": 3557620,
+      "cover": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3557620/b723141fa8cf93bb2bb56d03789561341a2cad62/header.jpg",
+      "_备注": "Steam 官方 header 图（3557620 的部分 CDN 域名/接口在国区取不到，故这里直接写明地址）",
+      "meta": {
+        "title": "Blue Archive",
+        "titleZh": "蔚蓝档案",
+        "dev": "NEXON Games",
+        "pub": "NEXON / Yostar",
+        "genres": "RPG, Gacha, Strategy",
+        "genresZh": "角色扮演, 卡牌, 策略",
+        "release": "4 Feb, 2021",
+        "releaseZh": "2021-02-04",
+        "desc": "Blue Archive is a story-driven RPG set in the academy city of Kivotos, where you lead a federal investigation club of students through tactical battles and an anime-style narrative."
+      }
+    }
+  ]
+}

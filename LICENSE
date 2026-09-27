@@ -1,0 +1,37 @@
+MIT License
+
+Copyright (c) 2026 KeepHope2901
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 关于第三方素材（重要）
+
+上面这份 MIT 协议只覆盖**本项目的代码与文档**（HTML / CSS / JavaScript / 构建脚本）。
+
+仓库内 `covers/` 目录下的游戏封面图、以及 `js/games.js` 中的游戏名称、简介、
+开发商等文字资料，版权归各自的权利人所有（各游戏开发商与发行商，图片经 Steam CDN
+分发）。这些素材仅作为技术演示用途收录，**不在 MIT 协议授权范围内**。
+
+如果你要公开仓库：
+
+- 保留本说明，不要声称对这些素材拥有版权；
+- 若权利人提出异议，删除对应文件即可 —— 页面会在缺图时自动显示占位封面，
+  不会因此出错（详见 README 的「抓不到封面怎么办」）。

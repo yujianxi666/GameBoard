@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GameBoard</title>
+<meta name="description" content="GameBoard — 本地游戏库展示板：扁平黑白界面，网格 / 列表双视图，封面与资料来自 Steam 商店。" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- 背景：极光光斑 + 星点粒子 -->
+<div class="backdrop" aria-hidden="true">
+  <span class="halo halo--1"></span>
+  <span class="halo halo--2"></span>
+  <span class="halo halo--3"></span>
+  <div class="dust" id="dust"></div>
+  <div class="vignette"></div>
+</div>
+
+<div class="shell" id="shell">
+
+  <header class="masthead" id="masthead">
+    <div class="masthead__eyebrow">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      STEAM · 本地库
+    </div>
+    <h1 class="masthead__title">GameBoard</h1>
+    <p class="masthead__sub">
+      <span class="stat"><b id="statGames">20</b> 款游戏</span>
+      <span class="dot" aria-hidden="true">·</span>
+      <span class="stat"><b id="statGenre">13</b> 种类型</span>
+      <span class="dot" aria-hidden="true">·</span>
+      <span class="stat">封面与资料来自 Steam 商店</span>
+    </p>
+  </header>
+
+  <section class="toolbar" id="toolbar" aria-label="筛选与视图">
+    <label class="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+      <input id="search" type="search" placeholder="搜索游戏 / Search…" autocomplete="off" spellcheck="false" />
+      <kbd>/</kbd>
+    </label>
+
+    <div class="chips" id="chips" role="group" aria-label="按类型筛选"></div>
+
+    <div class="toolbar__right">
+      <button class="btn btn--ghost" id="replay" type="button" title="重放入场动画">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v5h-5"/></svg>
+        重放动画
+      </button>
+      <div class="segmented" id="viewToggle" role="tablist" aria-label="视图切换">
+        <button class="segmented__btn is-active" data-view="grid" type="button" role="tab" aria-selected="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>
+          网格
+        </button>
+        <button class="segmented__btn" data-view="list" type="button" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          列表
+        </button>
+        <span class="segmented__thumb" aria-hidden="true"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="stage" id="stage">
+
+    <section class="board" id="board" aria-label="游戏网格">
+      <div class="board__glow" aria-hidden="true"></div>
+      <div class="scanline" aria-hidden="true"></div>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>
+        <span>没有匹配的游戏</span>
+        <button class="link" id="clearFilters" type="button">清除筛选</button>
+      </p>
+    </section>
+
+    <aside class="listpane" id="listPane" aria-label="游戏列表" hidden>
+      <div class="listpane__head">
+        <span>收藏夹 <em id="listCount">(18)</em></span>
+        <span class="listpane__hint">点击查看详情</span>
+      </div>
+      <ol class="glist" id="glist"></ol>
+    </aside>
+
+    <aside class="detail" id="detail" aria-label="游戏详情"></aside>
+  </div>
+
+  <footer class="footer">
+    <span>静态页面 · 无构建依赖 · 封面 © 各发行商，资料来自 Steam 商店 API</span>
+    <span class="footer__keys">
+      <kbd>/</kbd> 搜索 <kbd>1</kbd><kbd>2</kbd> 切换视图 <kbd>Esc</kbd> 关闭
+    </span>
+  </footer>
+</div>
+
+<!-- 详情弹窗 -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__scrim" data-close aria-hidden="true"></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle" id="modalPanel"></div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- 普通脚本（非 module）：这样直接双击本文件以 file:// 打开也能工作 -->
+<script src="js/games.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
