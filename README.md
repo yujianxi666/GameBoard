@@ -30,7 +30,7 @@ by a small build script driven by an editable config file.
 ## 快速开始
 
 ```bash
-git clone https://github.com/KeepHope2901/GameBoard.git
+git clone https://github.com/yujianxi666/GameBoard.git
 cd GameBoard
 ```
 
@@ -107,7 +107,7 @@ GameBoard/
 
 1. 打开仓库 **Settings → Pages**
 2. Source 选 **Deploy from a branch**，分支选 `main`、目录选 `/ (root)`
-3. 稍等片刻，访问 `https://keephope2901.github.io/GameBoard/`
+3. 稍等片刻，访问 `https://yujianxi666.github.io/GameBoard/`
 
 ## 界面与配色
 
